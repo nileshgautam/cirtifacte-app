@@ -23,10 +23,8 @@ $(function() {
                     let message = document.getElementById('msg');
                     message.classList.add('text-success');
                     message.innerHTML = data.msg;
-                    setTimeout(function() {
-                        // alert("Hello"); 
-                        window.location.href = BASEURL + data.path;
-                    }, 2000);
+                    window.location.href = BASEURL + data.path;
+
                 }
                 // console.log(data.role);
             },
@@ -42,10 +40,10 @@ $(function() {
             id = $(this).attr('id'),
 
             fileSize = file_data.size;
-        console.log(file_data);
-        console.log(fileSize);
+        // console.log(file_data);
+        // console.log(fileSize);
 
-        alert(id);
+        // alert(id);
         if (file_data != '') {
             if (fileSize <= 2000000) {
                 let form_data = new FormData();
